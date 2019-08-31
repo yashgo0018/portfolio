@@ -1,0 +1,38 @@
+<a class="menu-toggle rounded text-light" (click)="openNav()">
+  <i
+    class="fas fa-bars"
+    [ngClass]="{ 'fa-bars': !toggle, 'fa-times': toggle }"
+  ></i>
+</a>
+<nav id="sidebar-wrapper" [ngClass]="{ active: toggle }">
+  <ul class="sidebar-nav">
+    <li class="sidebar-brand">
+      <a class="js-scroll-trigger" (click)="lickClick()" href="#page-top"
+        >Start Bootstrap</a
+      >
+    </li>
+    <li class="sidebar-nav-item">
+      <a class="js-scroll-trigger" (click)="lickClick()" href="#page-top"
+        >Home</a
+      >
+    </li>
+    <li class="sidebar-nav-item">
+      <a class="js-scroll-trigger" (click)="lickClick()" href="#about">About</a>
+    </li>
+    <li class="sidebar-nav-item">
+      <a class="js-scroll-trigger" (click)="lickClick()" href="#services"
+        >Services</a
+      >
+    </li>
+    <li class="sidebar-nav-item">
+      <a class="js-scroll-trigger" (click)="lickClick()" href="#portfolio"
+        >Portfolio</a
+      >
+    </li>
+    <li class="sidebar-nav-item">
+      <a class="js-scroll-trigger" (click)="lickClick()" href="#contact"
+        >Contact</a
+      >
+    </li>
+  </ul>
+</nav>
