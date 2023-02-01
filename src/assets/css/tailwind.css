@@ -1,0 +1,33 @@
+@tailwind utilities;
+@tailwind components;
+@tailwind base;
+
+@layer utilities {
+  .p-page {
+    padding-left: var(--page-padding);
+    padding-right: var(--page-padding);
+  }
+  .pl-page {
+    padding-left: var(--page-padding);
+  }
+  .pr-page {
+    padding-right: var(--page-padding);
+  }
+
+  .transition-300 {
+    transition: 300ms;
+  }
+  .transition-500 {
+    transition: 500ms;
+  }
+  .transition-800 {
+    transition: 800ms;
+  }
+
+  .widescreen-only {
+    @apply mobile:hidden;
+  }
+  .mobile-only {
+    @apply widescreen:hidden;
+  }
+}
