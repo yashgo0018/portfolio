@@ -1,39 +1,34 @@
 {
   "siteMetadata": {
     "language": "en",
-    "siteUrl": "https://gatsby-starter-portfolio-minimal-theme.netlify.app/",
+    "siteUrl": "https://yashgoyal.dev/",
     "title": "Gatsby Starter for Portfolio Minimal",
     "titleTemplate": "%s · Portfolio Minimal",
     "description": "A Gatsby Starter Project to easily get started with Portfolio Minimal theme.",
-    "author": "Konstantin Münster",
-    "avatar": "../content/images/gatsby.png",
-    "bio": "This biography will be used in the footer area of an article and can contain some more details about the author.",
+    "author": "Yash Goyal",
+    "avatar": "../content/images/yash.jpg",
+    "bio": "Experienced Blockchain Developer and Machine Learning Enthusiast. Proficient in Solidity, ethers.js, Hardhat, React, NodeJs, and python. Strong understanding of blockchain technology and its potential use cases.",
     "social": {
-      "behance": "https://behance.com",
-      "github": "https://github.com/konstantinmuenster",
-      "medium": "https://konstantinmuenster.medium.com",
-      "linkedin": "https://www.linkedin.com/in/konstantin-muenster/",
-      "mail": "mailto:mail@konstantin.digital"
+      "github": "https://github.com/yashgo0018",
+      "linkedin": "https://www.linkedin.com/in/yashgo0018/",
+      "mail": "mailto:contact@yashgoyal.dev",
+      "twitter": "https://twitter.com/_yash_goyal_"
     }
   },
   "siteConfiguration": {
-    "logo": { "text": "Portfolio" },
+    "logo": { "text": "Yash Goyal" },
     "navigation": {
       "header": [
-        { "label": "About", "url": "/#about" },
+        { "label": "About", "url": "/" },
         { "label": "Blog", "url": "/blog" },
-        { "label": "Features", "url": "/#features" },
-        { "label": "Github", "url": "/#github" }
+        { "label": "Github", "url": "https://github.com/yashgo0018" }
       ],
       "ctaButton": {
         "openNewTab": true,
         "label": "Resume",
         "url": "/resume.pdf"
       },
-      "footer": [
-        { "label": "Privacy", "url": "/privacy" },
-        { "label": "Imprint", "url": "/imprint" }
-      ]
+      "footer": [{ "label": "Privacy", "url": "/privacy" }]
     },
     "featureToggles": {
       "useDarkModeAsDefault": false,

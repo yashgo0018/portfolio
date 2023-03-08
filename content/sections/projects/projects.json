@@ -2,40 +2,58 @@
   "projects": [
     {
       "visible": true,
-      "category": "🕹️ EASY AND QUICK SETUP",
-      "title": "Add content and deploy!",
-      "description": "Get up and running within minutes. Just install the starter, add your content, deploy it, and there you go! This starter works seamlessly with hosts like Netlify. Photo by Clément H on Unsplash.",
-      "tags": ["Content Integration", "Ready-2-Deploy"],
+      "category": "NFT | Gaming",
+      "title": "Trustpoint",
+      "description": "Trustpoint is a project that aims to decentralize and streamline the process of creating deals between gaming studios and celebrities by using smart contracts. Currently, the system for creating deals between gaming studios and celebrities is centralized (on paper), which can be costly, inefficient, and slow. Trustpoint's approach seeks to eliminate intermediaries and increase efficiency by using smart contracts to automate the process.",
+      "tags": [
+        "React.Js",
+        "Express.Js",
+        "Ethers.Js",
+        "Typescript",
+        "EthForAll Hackathon Winner"
+      ],
       "image": {
-        "src": "../../images/clement-h-95YRwf6CNw8-unsplash.jpg",
-        "alt": "Quick Setup",
-        "linkTo": "https://github.com/konstantinmuenster/gatsby-starter-portfolio-minimal-theme"
+        "src": "../../images/trustpoint.jpeg",
+        "alt": "Trustpoint",
+        "linkTo": "https://trustpoint.yashgoyal.dev"
       },
       "links": [
         {
           "type": "github",
-          "url": "https://github.com/konstantinmuenster/gatsby-starter-portfolio-minimal-theme"
+          "url": "https://github.com/Trustpoint-DAPP"
         },
         {
           "type": "external",
-          "url": "https://www.gatsbyjs.org/docs/mdx/writing-pages/"
+          "url": "https://trustpoint.yashgoyal.dev"
         }
       ]
     },
     {
       "visible": true,
-      "category": "🧰 EXTENDABLE LAYOUT",
-      "title": "Add more sections!",
-      "description": "The starter includes predefined sections as well as a template for new, custom sections. Moreover, you can add new projects to this section without additional coding. Photo by Kelly Sikkema on Unsplash.",
-      "tags": ["Custom Sections", "Easy-2-Use"],
+      "category": "NFT | DAO",
+      "title": "CredQuest",
+      "description": "CredQuest is a digital reputation network that verifies skills and accomplishments through AI integrations and Soul Bound Credentials. Freelancers can showcase their credentials on the platform's gig marketplace, providing a transparent and reliable representation of their qualifications for potential clients and employers.",
+      "tags": [
+        "FVM",
+        "OpenAI",
+        "Ethers.Js",
+        "Express.Js",
+        "Typescript",
+        "React.Js"
+      ],
       "image": {
-        "src": "../../images/kelly-sikkema-Hl3LUdyKRic-unsplash.jpg",
-        "alt": "Extendable Layout"
+        "src": "../../images/credquest.png",
+        "alt": "CredQuest",
+        "linkTo": "https://www.youtube.com/watch?v=GawZFMuOn4A"
       },
       "links": [
         {
           "type": "github",
-          "url": "https://github.com/konstantinmuenster/gatsby-starter-portfolio-minimal-theme"
+          "url": "https://github.com/captainahab0x/CredQuest"
+        },
+        {
+          "type": "youtube",
+          "url": "https://www.youtube.com/watch?v=GawZFMuOn4A"
         }
       ]
     }
@@ -43,6 +61,6 @@
   "button": {
     "visible": true,
     "label": "Visit on Github",
-    "url": "https://github.com/konstantinmuenster/gatsby-theme-portfolio-minimal"
+    "url": "https://github.com/yashgo0018"
   }
 }

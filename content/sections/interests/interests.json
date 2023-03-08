@@ -1,58 +1,51 @@
 {
   "interests": [
     {
-      "label": "Quick and Easy Setup",
+      "label": "Blockchain Development",
       "image": {
-        "src": "../../images/joystick.png",
+        "src": "../../images/blockchain.png",
         "alt": ""
       }
     },
     {
-      "label": "Content via Markdown",
+      "label": "DAPP Integration",
       "image": {
-        "src": "../../images/notebook.png",
+        "src": "../../images/dapp.png",
         "alt": ""
       }
     },
     {
-      "label": "Responsive Design",
+      "label": "Backend Development",
       "image": {
-        "src": "../../images/nail-polish.png",
+        "src": "../../images/backend.webp",
         "alt": ""
       }
     },
     {
-      "label": "Medium Integration",
+      "label": "Smart Contract Review",
       "image": {
-        "src": "../../images/medium.png",
+        "src": "../../images/smart-contracts.png",
         "alt": ""
       }
     },
     {
-      "label": "Animations",
+      "label": "NFT Development",
       "image": {
-        "src": "../../images/gem-stone.png",
+        "src": "../../images/nft.png",
         "alt": ""
       }
     },
     {
-      "label": "PWA (Offline Support)",
+      "label": "DAO Development",
       "image": {
-        "src": "../../images/mobile-phone.png",
+        "src": "../../images/dao.jpeg",
         "alt": ""
       }
     },
     {
-      "label": "Modern Tech-Stack",
+      "label": "ZK Development",
       "image": {
-        "src": "../../images/gatsby.png",
-        "alt": ""
-      }
-    },
-    {
-      "label": "Blazing Fast",
-      "image": {
-        "src": "../../images/high-voltage.png",
+        "src": "../../images/zk.png",
         "alt": ""
       }
     }

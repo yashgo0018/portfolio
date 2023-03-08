@@ -8,15 +8,15 @@
     "src": "../../images/waving-hand.png",
     "alt": "Waving Hand Emoji"
   },
-  "title": "I'm a Gatsby Starter",
+  "title": "I'm Yash",
   "subtitle": {
-    "prefix": "I do all the setup ",
-    "highlight": "for you",
-    "suffix": "."
+    "prefix": "",
+    "highlight": "Blockchain",
+    "suffix": " Developer"
   },
-  "description": "A Gatsby Starter Project to easily get started with Portfolio Minimal theme.",
+  "description": "Proficient in Solidity, ethers.js, Hardhat, React, NodeJs, and python.",
   "socialProfiles": {
-    "from": ["LinkedIn", "Medium", "Github", "Mail"],
-    "showIcons": false
+    "from": ["LinkedIn", "Github", "Mail", "Twitter"],
+    "showIcons": true
   }
 }

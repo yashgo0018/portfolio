@@ -3,12 +3,8 @@ imageSrc: "../../images/charles-deluvio-DgoyKNgPiFQ-unsplash.jpg"
 imageAlt: "About Gatsby Theme Portfolio Minimal"
 ---
 
-Portfolio Minimal is a Gatsby Theme that creates outstanding one-pages portfolio within minutes!
+I'm a full-time blockchain developer with 1.5 years of experience in this field. I'm proud to have worked with some of the best game developers in the world at my current blockchain combat gaming company. During my 5 years of programming experience, I have also worked as a freelancer for about 3 years, working on a variety of projects across different domains.
+  
+I'm particularly skilled in backend development, with most of my experience being in the MERN stack. I've worked on several projects using this technology stack, ranging from web applications to blockchain projects. In fact, I've won a few blockchain hackathons, including the ethforall hackathon organized by EthIndia.
 
-It has predefined sections for your bio, skills, projects, and contact details. If you are a writer on Medium, you can integrate your latest articles in a distinct section as well. While building the theme, I tried to keep the setup as simple as possible while keeping everything configurable if you like to.
-
-Using theme composition, you can easily customize the CSS theme to your own preferences - e.g. change colors, fonts, etc.
-
-Last but not least, it has some cool features you can opt-in to: Dark Mode, Splash Screen, Cookie Banner, and more to find out :)
-
-Photo by <a href="https://unsplash.com/@charlesdeluvio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="nofollow noopener noreferrer" aria-label="External Link"><u>Charles Deluvio</u></a> on Unsplash
+Overall, I'm passionate about software development and am always looking for new challenges to push myself further.
