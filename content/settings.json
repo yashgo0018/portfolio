@@ -12,7 +12,8 @@
       "github": "https://github.com/yashgo0018",
       "linkedin": "https://www.linkedin.com/in/yash-goyal-0018/",
       "mail": "mailto:contact@yashgoyal.dev",
-      "twitter": "https://twitter.com/_yash_goyal_"
+      "twitter": "https://twitter.com/_yash_goyal_",
+      "medium": "https://blog.yashgoyal.dev"
     }
   },
   "siteConfiguration": {
@@ -20,8 +21,16 @@
     "navigation": {
       "header": [
         { "label": "About", "url": "/" },
-        { "label": "Blog", "url": "/blog" },
-        { "label": "Github", "url": "https://github.com/yashgo0018" }
+        {
+          "label": "Blog",
+          "url": "https://blog.yashgoyal.dev",
+          "openNewTab": true
+        },
+        {
+          "label": "Github",
+          "url": "https://github.com/yashgo0018",
+          "openNewTab": true
+        }
       ],
       "ctaButton": {
         "openNewTab": true,
