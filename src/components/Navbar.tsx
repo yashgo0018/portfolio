@@ -1,5 +1,3 @@
-import { AiOutlineArrowRight } from "react-icons/ai";
-
 export default function Navbar() {
   return (
     <div className="flex py-5">
