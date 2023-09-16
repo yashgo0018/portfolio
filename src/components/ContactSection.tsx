@@ -1,4 +1,5 @@
 import { RefObject, createRef, useState } from "react";
+import emailJs from "@emailjs/browser";
 import validator from "validator";
 
 function FormField({
@@ -175,6 +176,18 @@ export default function ContactSection() {
     setErrors(_errors);
 
     if (hasError) return;
+
+    try {
+      const result = await emailJs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+      console.log(result.text);
+    } catch (error: any) {
+      console.log(error.text);
+    }
   };
 
   const budgetRangeOptions = [
