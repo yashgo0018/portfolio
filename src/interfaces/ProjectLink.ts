@@ -1,5 +1,4 @@
-interface Link {
+interface ProjectLink {
   type: string;
   href: string;
-  icon: Image;
 }

@@ -92,6 +92,11 @@ export default function HomePage() {
               links {
                 type
                 href
+                icon {
+                  asset {
+                    url
+                  }
+                }
               }
             }
           }

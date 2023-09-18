@@ -2,17 +2,22 @@ import { TbExternalLink } from "react-icons/tb";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Navbar from "./Navbar";
 
-function SocialLink({ platform, link }: { platform: string; link: string }) {
+function SocialLink({ link }: { link: Link }) {
   return (
     <a
-      href={link}
+      href={link.href}
       target="_blank"
-      className="flex gap-1 border-2 text-gray-400 hover:text-black border-gray-400 hover:border-black px-3 md:px-4 py-2 rounded-xl"
+      className="flex gap-1 sm:border-2 text-gray-400 hover:text-black sm:border-gray-400 hover:border-black sm:px-3 md:px-4 sm:py-2 rounded-xl"
     >
-      <span className="my-auto">
+      <span className="my-auto hidden sm:block">
         <TbExternalLink />
       </span>
-      {platform}
+      <span className="sm:block hidden">{link.type}</span>
+      <img
+        src={link.icon.asset.url}
+        className="my-auto w-8 h-8 sm:hidden"
+        alt=""
+      />
     </a>
   );
 }
@@ -45,11 +50,7 @@ export default function HeroSection({
       <div className="absolute bottom-0 left-0 right-0">
         <div className="flex gap-4 my-10">
           {links.map((socialLinkObj) => (
-            <SocialLink
-              key={socialLinkObj.type}
-              platform={socialLinkObj.type}
-              link={socialLinkObj.href}
-            />
+            <SocialLink key={socialLinkObj.type} link={socialLinkObj} />
           ))}
           <div className="flex-1"></div>
           <a
