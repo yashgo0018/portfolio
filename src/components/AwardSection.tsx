@@ -18,9 +18,11 @@ export default function AwardSection({ awards }: { awards: Award[] }) {
         </div>
         <div className="col-span-3 xl:col-span-2 mt-10 lg:mt-0">
           <div className="">
-            {awards.map((award, index) => (
-              <AwardListItem award={award} key={index} />
-            ))}
+            {awards
+              .sort((a, b) => b.date - a.date)
+              .map((award, index) => (
+                <AwardListItem award={award} key={index} />
+              ))}
           </div>
         </div>
       </div>
