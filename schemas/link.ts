@@ -16,5 +16,10 @@ export default {
       type: 'url',
       validation: (rule: Rule) => rule.required(),
     },
+    {
+      name: 'icon',
+      title: 'Icon',
+      type: 'image'
+    }
   ],
 }
