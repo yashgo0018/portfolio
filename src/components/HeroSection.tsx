@@ -30,7 +30,7 @@ export default function HeroSection({
   links: Link[];
 }) {
   return (
-    <div className="h-screen relative  md:mx-0 mx-10">
+    <div className="h-screen relative md:mx-10 mx-5">
       <Navbar />
       <div className="absolute top-[50%] translate-y-[-50%]">
         <div className="text-6xl md:text-7xl xl:text-8xl">

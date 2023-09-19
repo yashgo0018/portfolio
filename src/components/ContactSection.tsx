@@ -208,7 +208,7 @@ export default function ContactSection() {
   ];
 
   return (
-    <div className="min-h-screen relative py-20 md:mx-0 mx-10" id="contact">
+    <div className="min-h-screen relative py-20 md:mx-10 mx-5" id="contact">
       <div className="text-black text-center text-5xl md:text-6xl lg:text-7xl">
         <div className="">
           <span className="text-gray-400">Say Hi!</span> and tell me

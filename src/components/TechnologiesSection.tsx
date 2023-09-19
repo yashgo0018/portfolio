@@ -4,7 +4,7 @@ export default function TechnologiesSection({
   technologies: Technology[];
 }) {
   return (
-    <div className="min-h-screen relative md:mx-0 mx-10" id="techstack">
+    <div className="min-h-screen relative md:mx-10 mx-5" id="techstack">
       <div className="absolute translate-y-[-50%] top-[50%]">
         <div className="lg:text-6xl text-5xl mb-20 text-center">
           My Techstack

@@ -11,7 +11,7 @@ function AwardListItem({ award }: { award: Award }) {
 
 export default function AwardSection({ awards }: { awards: Award[] }) {
   return (
-    <div className="py-20 md:mx-0 mx-10" id="awards">
+    <div className="py-20 md:mx-10 mx-5" id="awards">
       <div className="lg:grid grid-cols-5 xl:grid-cols-3">
         <div className="col-span-2 xl:col-span-1 text-5xl md:text-6xl lg:text-7xl">
           Awards & Recognition

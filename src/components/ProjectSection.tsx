@@ -6,7 +6,7 @@ function ProjectBox({ project }: { project: Project }) {
       <div className="">
         <img
           src={project.image.asset.url}
-          className="rounded-xl grayscale hover:grayscale-0"
+          className="rounded-xl" // "grayscale hover:grayscale-0"
           alt={project.title}
         />
       </div>
@@ -35,7 +35,7 @@ function ProjectBox({ project }: { project: Project }) {
 
 export default function ProjectSection({ projects }: { projects: Project[] }) {
   return (
-    <div className="py-20 min-h-screen md:mx-0 mx-10" id="projects">
+    <div className="py-20 min-h-screen md:mx-10 mx-5" id="projects">
       <div className="text-5xl md:text-6xl lg:text-7xl">
         Discover my latest work
       </div>

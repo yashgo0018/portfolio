@@ -7,12 +7,12 @@ export default function AboutSection({
 }) {
   return (
     <div
-      className="min-h-screen relative md:mx-0 mx-10 mt-20 sm:mt-0"
+      className="min-h-screen relative md:mx-10 mx-5 mt-20 sm:mt-0"
       id="about"
     >
       <div className="absolute top-[50%] translate-y-[-50%] left-0 right-0">
         <div className="lg:grid lg:grid-cols-3 gap-6">
-          <div className="flex lg:col-span-1 lg:mb-0 mb-10 lg:mb-0">
+          <div className="flex lg:col-span-1 lg:mb-0 mb-10">
             <div className="flex-1"></div>
             <img
               src={image?.asset.url}
