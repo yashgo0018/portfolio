@@ -2,7 +2,7 @@ import { TbExternalLink } from "react-icons/tb";
 
 function ProjectBox({ project }: { project: Project }) {
   return (
-    <div className="border-2 rounded-xl p-6">
+    <div className="border-2 rounded-xl p-6 flex flex-col">
       <div className="">
         <img
           src={project.image.asset.url}
@@ -10,21 +10,24 @@ function ProjectBox({ project }: { project: Project }) {
           alt={project.title}
         />
       </div>
-      <div className="mt-5 text-2xl">{project.title}</div>
-      <div className="mt-3 text-md">{project.description}</div>
-      <div className="flex mt-5 gap-3">
-        {project.links.map((linkObj) => (
-          <a
-            key={linkObj.type}
-            href={linkObj.href}
-            className="flex border-2 px-3 py-1 rounded-lg gap-2"
-          >
-            <span className="my-auto">
-              <TbExternalLink />
-            </span>
-            {linkObj.type}
-          </a>
-        ))}
+      <div className="flex flex-col flex-1">
+        <div className="mt-5 text-2xl">{project.title}</div>
+        <div className="mt-3 text-md">{project.description}</div>
+        <div className="flex-1"></div>
+        <div className="flex mt-5 gap-3">
+          {project.links.map((linkObj) => (
+            <a
+              key={linkObj.type}
+              href={linkObj.href}
+              className="flex border-2 px-3 py-1 rounded-lg gap-2"
+            >
+              <span className="my-auto">
+                <TbExternalLink />
+              </span>
+              {linkObj.type}
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   );
