@@ -17,6 +17,7 @@ function ProjectBox({ project }: { project: Project }) {
           <a
             key={linkObj.type}
             href={linkObj.href}
+            target="_blank"
             className="flex border-2 px-3 py-1 rounded-lg gap-2"
           >
             <span className="my-auto">
