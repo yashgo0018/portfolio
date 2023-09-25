@@ -11,16 +11,18 @@ function AwardListItem({ award }: { award: Award }) {
 
 export default function AwardSection({ awards }: { awards: Award[] }) {
   return (
-    <div className="py-20 md:mx-0 mx-10" id="awards">
+    <div className="py-20 md:mx-10 mx-5" id="awards">
       <div className="lg:grid grid-cols-5 xl:grid-cols-3">
         <div className="col-span-2 xl:col-span-1 text-5xl md:text-6xl lg:text-7xl">
           Awards & Recognition
         </div>
         <div className="col-span-3 xl:col-span-2 mt-10 lg:mt-0">
           <div className="">
-            {awards.map((award, index) => (
-              <AwardListItem award={award} key={index} />
-            ))}
+            {awards
+              .sort((a, b) => b.date.getTime() - a.date.getTime())
+              .map((award, index) => (
+                <AwardListItem award={award} key={index} />
+              ))}
           </div>
         </div>
       </div>

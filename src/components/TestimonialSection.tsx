@@ -4,7 +4,7 @@ export default function TestimonialSection({
   testimonials: Testimonial[];
 }) {
   return (
-    <div className="min-h-screen py-20 md:mx-0 mx-10" id="testimonials">
+    <div className="min-h-screen py-20 md:mx-10 mx-5" id="testimonials">
       <div className="lg:grid lg:grid-cols-2">
         <div className="mb-10 lg:mb-0 col-span-1 text-5xl md:text-6xl lg:text-7xl">
           Let's see what my clients say

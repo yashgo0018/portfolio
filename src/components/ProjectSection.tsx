@@ -2,30 +2,33 @@ import { TbExternalLink } from "react-icons/tb";
 
 function ProjectBox({ project }: { project: Project }) {
   return (
-    <div className="border-2 rounded-xl p-6">
+    <div className="border-2 rounded-xl p-6 flex flex-col">
       <div className="">
         <img
           src={project.image.asset.url}
-          className="rounded-xl grayscale hover:grayscale-0"
+          className="rounded-xl" // "grayscale hover:grayscale-0"
           alt={project.title}
         />
       </div>
-      <div className="mt-5 text-2xl">{project.title}</div>
-      <div className="mt-3 text-md">{project.description}</div>
-      <div className="flex mt-5 gap-3">
-        {project.links.map((linkObj) => (
-          <a
-            key={linkObj.type}
-            href={linkObj.href}
-            target="_blank"
-            className="flex border-2 px-3 py-1 rounded-lg gap-2"
-          >
-            <span className="my-auto">
-              <TbExternalLink />
-            </span>
-            {linkObj.type}
-          </a>
-        ))}
+      <div className="flex flex-col flex-1">
+        <div className="mt-5 text-2xl">{project.title}</div>
+        <div className="mt-3 text-md">{project.description}</div>
+        <div className="flex-1"></div>
+        <div className="flex mt-5 gap-3">
+          {project.links.map((linkObj) => (
+            <a
+              key={linkObj.type}
+              href={linkObj.href}
+              target="_blank"
+              className="flex border-2 px-3 py-1 rounded-lg gap-2"
+            >
+              <span className="my-auto">
+                <TbExternalLink />
+              </span>
+              {linkObj.type}
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -33,7 +36,7 @@ function ProjectBox({ project }: { project: Project }) {
 
 export default function ProjectSection({ projects }: { projects: Project[] }) {
   return (
-    <div className="py-20 min-h-screen md:mx-0 mx-10" id="projects">
+    <div className="py-20 min-h-screen md:mx-10 mx-5" id="projects">
       <div className="text-5xl md:text-6xl lg:text-7xl">
         Discover my latest work
       </div>
