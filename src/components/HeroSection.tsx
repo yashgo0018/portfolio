@@ -14,11 +14,9 @@ function SocialLink({ link }: { link: Link }) {
         <TbExternalLink />
       </span>
       <span className="sm:block hidden">{link.type}</span>
-      <Image
-        src={link.icon.asset.url}
-        className="my-auto w-8 h-8 sm:hidden"
-        alt=""
-      />
+      <div className="relative my-auto w-8 h-8 sm:hidden">
+        <Image fill src={link.icon.asset.url} className="" alt="" />
+      </div>
     </a>
   );
 }

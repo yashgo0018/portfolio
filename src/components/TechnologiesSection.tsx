@@ -13,10 +13,11 @@ export default function TechnologiesSection({
         </div>
         <div className="flex flex-wrap gap-10">
           {technologies.map((technology) => (
-            <div className="mx-auto" key={technology.name}>
+            <div className="mx-auto lg:h-16 md:h-14 h-12" key={technology.name}>
               <Image
+                layout="fill"
                 src={technology.logo.asset.url}
-                className="grayscale backdrop-grayscale lg:h-16 md:h-14 h-12"
+                className="grayscale backdrop-grayscale  !relative"
                 alt=""
               />
             </div>

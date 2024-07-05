@@ -16,11 +16,14 @@ export default function AboutSection({
         <div className="lg:grid lg:grid-cols-3 gap-6">
           <div className="flex lg:col-span-1 lg:mb-0 mb-10">
             <div className="flex-1"></div>
-            <Image
-              src={image?.asset.url || ""}
-              className="h-80 lg:h-full aspect-square rounded-2xl"
-              alt="Yash Goyal"
-            />
+            <div className="h-80 lg:h-full">
+              <Image
+                layout="fill"
+                src={image?.asset.url || ""}
+                className="aspect-square rounded-2xl !relative"
+                alt="Yash Goyal"
+              />
+            </div>
             <div className="flex-1"></div>
           </div>
           <div className="col-span-2 lg:relative text-xl xl:text-2xl text-justify">

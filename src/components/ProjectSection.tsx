@@ -4,8 +4,9 @@ import { TbExternalLink } from "react-icons/tb";
 function ProjectBox({ project }: { project: Project }) {
   return (
     <div className="border-2 rounded-xl p-6 flex flex-col">
-      <div className="">
+      <div className="relative">
         <Image
+          fill
           src={project.image.asset.url}
           className="rounded-xl" // "grayscale hover:grayscale-0"
           alt={project.title}

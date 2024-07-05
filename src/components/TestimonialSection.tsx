@@ -19,11 +19,14 @@ export default function TestimonialSection({
                   &quot;{testimonial.review}&quot;
                 </div>
                 <div className="flex gap-7 mt-8">
-                  <Image
-                    src={testimonial.image.asset.url}
-                    className="rounded-full w-20 h-20"
-                    alt={testimonial.name}
-                  />
+                  <div className="relative w-20 h-20">
+                    <Image
+                      fill
+                      src={testimonial.image.asset.url}
+                      className="rounded-full w-20 h-20"
+                      alt={testimonial.name}
+                    />
+                  </div>
                   <div className="my-auto">
                     <div className="text-xl">{testimonial.name}</div>
                     <div className="">{testimonial.position}</div>
