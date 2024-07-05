@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import { gql } from "@apollo/client";
+import { Metadata } from "next";
 import AboutSection from "../components/AboutSection";
 import AwardSection from "../components/AwardSection";
 import ContactSection from "../components/ContactSection";
@@ -34,6 +35,19 @@ export default async function Home() {
       <Footer />
     </>
   );
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  const { shortDescription, image, technologies } = await getData();
+
+  return {
+    title: "Yash Goyal | Blockchain & Backend Developer",
+    description: shortDescription,
+    keywords: technologies.map((tech) => tech.name),
+    openGraph: {
+      images: ["/favicon.png", image.asset.url],
+    },
+  };
 }
 
 async function getData() {
@@ -122,5 +136,14 @@ async function getData() {
     links: allSettings[0].links,
     projects: allProject,
     awards,
+  } as {
+    shortDescription: string;
+    longDescription: string;
+    image: ImageType;
+    technologies: Technology[];
+    testimonials: Testimonial[];
+    links: Link[];
+    projects: Project[];
+    awards: Award[];
   };
 }
