@@ -1,7 +1,8 @@
 "use client";
 
+import LoadingImage from "@/assets/LoadingImage";
 import emailJs from "@emailjs/browser";
-import { RefObject, createRef, useState } from "react";
+import { RefObject, createRef, useEffect, useState } from "react";
 import validator from "validator";
 
 function FormField({
@@ -42,15 +43,17 @@ function FormOptionField({
   name,
   fieldRef,
   options,
+  selectedValue,
+  setSelectedValue,
 }: {
   label: string;
   name: string;
   fieldRef: RefObject<HTMLSelectElement>;
   options: string[];
   error: string;
+  selectedValue: string;
+  setSelectedValue: (value: string) => void;
 }) {
-  const [selectedValue, setSelectedValue] = useState("notSelected");
-
   return (
     <div className="mt-10">
       <div className="text-xl">{label}</div>
@@ -120,6 +123,9 @@ function FormTextArea({
 }
 
 export default function ContactSection() {
+  const [selectedBudgetRange, setSelectedBudgetRange] = useState("notSelected");
+  const [selectedServiceOption, setSelectedServiceOption] =
+    useState("notSelected");
   const [errors, setErrors] = useState({
     name: "",
     email: "",
@@ -128,6 +134,7 @@ export default function ContactSection() {
     service: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
 
   const nameRef = createRef<HTMLInputElement>();
   const emailRef = createRef<HTMLInputElement>();
@@ -136,6 +143,18 @@ export default function ContactSection() {
   const serviceRef = createRef<HTMLSelectElement>();
   const messageRef = createRef<HTMLTextAreaElement>();
   const form = createRef<HTMLFormElement>();
+
+  const [messageSent, setMessageSent] = useState(false);
+
+  useEffect(() => {
+    if (!messageSent) return;
+
+    const timer = setTimeout(() => {
+      setMessageSent(false);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, [messageSent]);
 
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -179,16 +198,28 @@ export default function ContactSection() {
 
     if (hasError) return;
 
+    const formElement = form.current;
+
+    setLoading(true);
     try {
-      const result = await emailJs.sendForm(
+      await emailJs.sendForm(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "",
-        form.current,
+        formElement,
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ""
       );
-      console.log(result.text);
+
+      // clear the form
+      formElement.reset();
+      setSelectedBudgetRange("notSelected");
+      setSelectedServiceOption("notSelected");
+
+      // send message that email has been sent
+      setMessageSent(true);
     } catch (error: any) {
-      console.log(error.text);
+      console.log(error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -246,6 +277,8 @@ export default function ContactSection() {
         />
         <FormOptionField
           label="What's in your mind?"
+          selectedValue={selectedServiceOption}
+          setSelectedValue={setSelectedServiceOption}
           name="service"
           fieldRef={serviceRef}
           options={serviceOptions}
@@ -253,6 +286,8 @@ export default function ContactSection() {
         />
         <FormOptionField
           label="How much is your budget range?"
+          selectedValue={selectedBudgetRange}
+          setSelectedValue={setSelectedBudgetRange}
           name="budget"
           fieldRef={budgetRangeRef}
           options={budgetRangeOptions}
@@ -266,13 +301,30 @@ export default function ContactSection() {
           error={errors.message}
         />
         <div className="flex mt-8">
-          <div className="flex-1"></div>
-          <button
-            type="submit"
-            className="bg-black py-5 px-10 text-white rounded-full"
-          >
-            Submit
-          </button>
+          {!messageSent ? (
+            <>
+              <div className="flex-1"></div>
+              {!loading ? (
+                <button
+                  type="submit"
+                  className="bg-black py-5 px-10 text-white rounded-full"
+                >
+                  Submit
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  className="bg-gray-900 py-5 px-10 text-white rounded-full flex gap-2"
+                  disabled
+                >
+                  <LoadingImage />
+                  Submiting...
+                </button>
+              )}
+            </>
+          ) : (
+            <div className="text-green-400 text-center">Message Sent!</div>
+          )}
         </div>
       </form>
     </div>
