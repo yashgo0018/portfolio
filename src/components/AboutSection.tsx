@@ -1,0 +1,40 @@
+import Image from "next/image";
+
+export default function AboutSection({
+  longDescription,
+  image,
+}: {
+  longDescription: string;
+  image?: ImageType;
+}) {
+  return (
+    <div
+      className="min-h-screen relative md:mx-10 mx-5 mt-20 sm:mt-0"
+      id="about"
+    >
+      <div className="absolute top-[50%] translate-y-[-50%] left-0 right-0">
+        <div className="lg:grid lg:grid-cols-3 gap-6">
+          <div className="flex lg:col-span-1 lg:mb-0 mb-10">
+            <div className="flex-1"></div>
+            <Image
+              src={image?.asset.url || ""}
+              className="h-80 lg:h-full aspect-square rounded-2xl"
+              alt="Yash Goyal"
+            />
+            <div className="flex-1"></div>
+          </div>
+          <div className="col-span-2 lg:relative text-xl xl:text-2xl text-justify">
+            <div className="lg:absolute lg:top-[50%] lg:translate-y-[-50%]">
+              {longDescription?.split("\n").map((line, i) => (
+                <div key={i}>
+                  {line}
+                  <br />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
